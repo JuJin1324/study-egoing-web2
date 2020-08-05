@@ -75,5 +75,16 @@ let title = queryData.id
 // query string Key를 Dictionary(Java에서는 Map)의 Key로 사용한 경우 
 let title = queryData['id']     // Key를 
 ```
+docker 실행: `docker-compose up`
+docker 종료: `docker-compose down`
 
-
+## 12-File 읽기 기능
+fs.readFile() 함수에서 callback 으로 화살표 함수(lambda) 사용
+``` javascript
+fs.readFile('sample.txt', 'utf8', (err, data) => {
+    console.log(data);
+})
+```
+화살표 함수에서 function 키워드를 사용한 함수를 대체못하는 경우: `this`가 필요한 경우   
+TODO: 이 경우 bind, call, apply 효력을 발휘하지 못한다고 나오는데 bind, call, apply 효력에 대한 추가 필요
+* 참조사이트: [자바스크립트 화살표 함수 (람다식)](https://progl.tistory.com/4)
