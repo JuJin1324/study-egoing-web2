@@ -62,3 +62,18 @@ $ docker run --rm -v $PWD/5-execute-web-server/web2-nodejs:/home/workspace-nodej
 생략
 
 ## 9-Url의 이해
+구조: protocol://host:port/path?querystring=value&key=value
+예시: `http://opentutorials.org:3000/main?id=HTML&page=12`
+
+## 10-11
+Query string 에서 Key/Value 가져올 때 방식 변경
+```javascript
+let queryData = url.parse(_url, true).query;
+// query string Key를 멤버변수처럼 사용한 경우
+// 해당 객체 선언이 없기 때문에 intellij 에서 warning 발생
+let title = queryData.id        
+// query string Key를 Dictionary(Java에서는 Map)의 Key로 사용한 경우 
+let title = queryData['id']     // Key를 
+```
+
+
