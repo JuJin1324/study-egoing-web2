@@ -88,3 +88,9 @@ fs.readFile('sample.txt', 'utf8', (err, data) => {
 화살표 함수에서 function 키워드를 사용한 함수를 대체못하는 경우: `this`가 필요한 경우   
 TODO: 이 경우 bind, call, apply 효력을 발휘하지 못한다고 나오는데 bind, call, apply 효력에 대한 추가 필요
 * 참조사이트: [자바스크립트 화살표 함수 (람다식)](https://progl.tistory.com/4)
+
+## 13-14-15-16-17
+Javascript 문법으로 생략
+
+## 18 console input
+`process.argv`: 콘솔 입력 값의 배열, [0]: node 프로그램, [1]: 실행한 js파일의 경로, [3]: 입력값
