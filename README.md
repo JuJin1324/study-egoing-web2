@@ -92,5 +92,9 @@ TODO: 이 경우 bind, call, apply 효력을 발휘하지 못한다고 나오는
 ## 13-14-15-16-17
 Javascript 문법으로 생략
 
-## 18 console input
-`process.argv`: 콘솔 입력 값의 배열, [0]: node 프로그램, [1]: 실행한 js파일의 경로, [3]: 입력값
+## 18 process.argv
+`process.argv`: 프로그램 실행 시에 입력받은 값을 담고 있다.
+* [0]: node 명령어 프로그램 파일 절대경로
+* [1]: node 명령어로 실행한 js 파일의 절대경로
+* [2]: js 파일 다음에 인자로 준 텍스트 값
+ 
