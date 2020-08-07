@@ -98,3 +98,10 @@ Javascript 문법으로 생략
 * [1]: node 명령어로 실행한 js 파일의 절대경로
 * [2]: js 파일 다음에 인자로 준 텍스트 값
  
+## 19
+이전에 template 변수에 template literal 문장을 할당했다. template literal => `<!doctype html> ...`   
+하지만 if-else 문 사용시에 template literal 문장 때문에 들여쓰기가 망가져서 코드 가독성이 너무 떨어져서
+template literal 문장을 파일에 따로 두고 해당 문장을 파일에서 읽어서 변수에 두면 template literal 안에 있는
+${variable} 문장이 맞춰질까 궁금했었다. 하지만 결론적으로 문장이 맵핑되지 않았다.
+
+ 
