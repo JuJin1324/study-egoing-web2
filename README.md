@@ -88,3 +88,11 @@ fs.readFile('sample.txt', 'utf8', (err, data) => {
 화살표 함수에서 function 키워드를 사용한 함수를 대체못하는 경우: `this`가 필요한 경우   
 TODO: 이 경우 bind, call, apply 효력을 발휘하지 못한다고 나오는데 bind, call, apply 효력에 대한 추가 필요
 * 참조사이트: [자바스크립트 화살표 함수 (람다식)](https://progl.tistory.com/4)
+
+## 19
+이전에 template 변수에 template literal 문장을 할당했다. template literal => `<!doctype html> ...`   
+하지만 if-else 문 사용시에 template literal 문장 때문에 들여쓰기가 망가져서 코드 가독성이 너무 떨어져서
+template literal 문장을 파일에 따로 두고 해당 문장을 파일에서 읽어서 변수에 두면 template literal 안에 있는
+${variable} 문장이 맞춰질까 궁금했었다. 하지만 결론적으로 문장이 맵핑되지 않았다.
+
+ 
