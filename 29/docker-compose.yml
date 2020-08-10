@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node:
+    container_name: pm2-test
+    image: jujin/pm2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=debug
+    volumes:
+      - ./web2-nodejs:/home/node/app
+    ports:
+      - 3000:3000
+    entrypoint: /home/node/app/entrypoint.sh

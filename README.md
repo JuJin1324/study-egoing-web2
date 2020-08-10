@@ -88,3 +88,20 @@ fs.readFile('sample.txt', 'utf8', (err, data) => {
 화살표 함수에서 function 키워드를 사용한 함수를 대체못하는 경우: `this`가 필요한 경우   
 TODO: 이 경우 bind, call, apply 효력을 발휘하지 못한다고 나오는데 bind, call, apply 효력에 대한 추가 필요
 * 참조사이트: [자바스크립트 화살표 함수 (람다식)](https://progl.tistory.com/4)
+
+## 29-Package Manager
+### PM2
+* 설명: node.js 의 프로세스 매니저
+* 설치: `npm install pm2 -g`
+* 실행: `pm2 start main.js`
+* 노드 파일을 수정하면 노드를 재구동하지 않아도 적용하도록 실행: `pm2 start main.js --watch`
+* 종료: `pm2 stop main.js`
+* 모니터링: `pm2 monit`
+* 실행 리스트: `pm2 list`
+* 로드 밸런싱도 가능하다. 단순히 디버깅 레벨의 프로그램이 아님.
+* 도커로 실행을 원하던 도중 pm2의 위치가 필요해졌다. 그 때 'whereis' 명령어를 통해서 `whereis pm2` 위치 파악.
+* 유용 사이트: [PM2를 활용한 Node.js 무중단 서비스하기](https://engineering.linecorp.com/ko/blog/pm2-nodejs/)
+
+### Docker
+실행: `docker-compose up`
+모니터링: `docker-compose exec node pm2 monit`
