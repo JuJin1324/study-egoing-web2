@@ -105,3 +105,20 @@ template literal 문장을 파일에 따로 두고 해당 문장을 파일에서
 ${variable} 문장이 맞춰질까 궁금했었다. 하지만 결론적으로 문장이 맵핑되지 않았다.
 
  
+
+## 29-Package Manager
+### PM2
+* 설명: node.js 의 프로세스 매니저
+* 설치: `npm install pm2 -g`
+* 실행: `pm2 start main.js`
+* 노드 파일을 수정하면 노드를 재구동하지 않아도 적용하도록 실행: `pm2 start main.js --watch`
+* 종료: `pm2 stop main.js`
+* 모니터링: `pm2 monit`
+* 실행 리스트: `pm2 list`
+* 로드 밸런싱도 가능하다. 단순히 디버깅 레벨의 프로그램이 아님.
+* 도커로 실행을 원하던 도중 pm2의 위치가 필요해졌다. 그 때 'whereis' 명령어를 통해서 `whereis pm2` 위치 파악.
+* 유용 사이트: [PM2를 활용한 Node.js 무중단 서비스하기](https://engineering.linecorp.com/ko/blog/pm2-nodejs/)
+
+### Docker
+실행: `docker-compose up`
+모니터링: `docker-compose exec node pm2 monit`
